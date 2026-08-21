@@ -1,0 +1,48 @@
+{
+    "name": "pulseboard-redis-backend",
+    "version": "1.0.0",
+    "description": "Collaborative platform backend leveraging Redis for real-time messaging, caching, streaming, job queuing, and analytics.",
+    "type": "module",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "ts-node src/index.ts",
+        "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+        "worker": "ts-node src/worker.ts",
+        "scheduler": "ts-node src/scheduler.ts",
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand --detectOpenHandles --forceExit"
+    },
+    "keywords": [
+        "redis",
+        "express",
+        "typescript",
+        "pubsub",
+        "streams",
+        "geo",
+        "hyperloglog",
+        "bitmaps"
+    ],
+    "author": "PulseBoard Team",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.6",
+        "dotenv": "^17.4.2",
+        "express": "^5.2.1",
+        "ioredis": "^6.0.0",
+        "uuid": "^14.0.2"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.6",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^26.2.0",
+        "@types/supertest": "^7.2.1",
+        "@types/uuid": "^10.0.0",
+        "jest": "^30.4.2",
+        "supertest": "^7.2.2",
+        "ts-jest": "^29.4.12",
+        "ts-node": "^10.9.2",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.7.3"
+    }
+}
