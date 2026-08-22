@@ -6,10 +6,10 @@
     "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
-        "start": "ts-node src/index.ts",
-        "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-        "worker": "ts-node src/worker.ts",
-        "scheduler": "ts-node src/scheduler.ts",
+        "start": "node --loader ts-node/esm src/index.ts",
+        "dev": "node --loader ts-node/esm --watch src/index.ts",
+        "worker": "node --loader ts-node/esm src/worker.ts",
+        "scheduler": "node --loader ts-node/esm src/scheduler.ts",
         "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand --detectOpenHandles --forceExit"
     },
     "keywords": [
